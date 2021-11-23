@@ -1,0 +1,173 @@
+@for $i from 1 to 500 {
+    $percent: random(999);
+    $percent: calc((#{$percent}+1) / 10);
+    $percent2: random(999);
+    $percent2: calc((#{$percent2}+1) / 10);
+    $stars_size: random(2);
+    $stars_size: calc( #{$stars_size} * 1px); // On crée l'unité Pixel pour les propriétés qui ne l'utilise pas par défaut !
+    $shadow: $stars_size;
+    .s#{$i} {
+        position: fixed;
+        top: calc(#{$percent} * 1%);
+        left: calc(#{$percent2} * 1%);
+        height: $stars_size;
+        width: $stars_size;
+        border-radius: $stars_size;
+        // box-shadow: 0 0 #{$shadow} #{$shadow} white;
+        background-color: white;
+        animation: 0.4s infinite alternate test1;
+    }
+}
+
+html {
+    background-image: linear-gradient(to bottom left, #003366 25%, lightsalmon);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#sunShadow {
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    animation: 4s forwards 1 slidein, 4s forwards 1 shadow;
+    box-shadow: 0 0 1000px 350px lightyellow;
+    transform: rotate(0turn) translate(0, -37000%) rotate(0turn);
+}
+
+#sun {
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    animation: 4s forwards 1 slidein, sun 4s forwards;
+    box-shadow: 0 0 20px 50px yellow;
+    transform: rotate(0turn) translate(0, -37000%) rotate(0turn);
+    z-index: 2;
+}
+
+#sunCenter {
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+    animation: slidein 4s forwards, sun-center 4s forwards;
+    box-shadow: 0 0 20px 10px rgb(255, 0, 0);
+    background-color: #ff5f00;
+    transform: rotate(0turn) translate(0, -37000%) rotate(0turn);
+    z-index: 3;
+}
+
+.pic {
+    /* TO DO : clip-path: *** */
+    position: fixed;
+    left: 5%;
+    bottom: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid darkolivegreen;
+    z-index: 100;
+}
+
+.change-pic {
+    visibility: hidden;
+    animation: 3s 2s forwards 1 change-pic;
+}
+
+.change-mtn {
+    visibility: hidden;
+    animation: 3s 2s forwards 1 change-mtn;
+}
+
+#mtn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    background-color: darkolivegreen;
+    z-index: 100;
+    /* visibility: hidden; */
+}
+
+@keyframes slidein {
+    from {
+        transform: rotate(0turn) translate(0, -37000%) rotate(0turn);
+    }
+    to {
+        position: fixed;
+        // height: 2px;
+        // width: 2px;
+        transform: rotate(-0.25turn) translate(0, -37000%) rotate(0.25turn);
+        //TO DO : SLIDE IN % Thanks to SASS
+    }
+}
+
+@keyframes sun-center {
+    to {
+        background-color: #ff6900;
+        box-shadow: 0 0 30px 15px red;
+    }
+}
+
+@keyframes sun {
+    to {
+        box-shadow: 0 0 25px 55px orange;
+    }
+}
+
+@keyframes shadow {
+    to {
+        box-shadow: 0 0 1000px 300px orange;
+    }
+}
+
+@keyframes change-pic {
+    100% {
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 200px solid #35441d;
+    }
+}
+
+@keyframes change-mtn {
+    100% {
+        background-color: #35441d;
+    }
+}
+
+@keyframes shining_stars {
+    from {
+        transform: scale(random(2));
+    }
+    to {
+        transform: scale(random(2));
+    }
+}
+
+@keyframes test1 {
+    to {
+        transform: scale(0.70);
+    }
+}
+
+@keyframes test2 {
+    to {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes test3 {
+    to {
+        transform: scale(1.2);
+    }
+}
