@@ -3,19 +3,39 @@
     $percent: calc((#{$percent}+1) / 10);
     $percent2: random(999);
     $percent2: calc((#{$percent2}+1) / 10);
-    $stars_size: random(2);
-    $stars_size: calc( #{$stars_size} * 1px); // On crée l'unité Pixel pour les propriétés qui ne l'utilise pas par défaut !
+    $stars_size: random(3);
+    // $stars_size: calc( #{$stars_size} * 1px); // On crée l'unité Pixel pour les propriétés qui ne l'utilise pas par défaut !
     $shadow: $stars_size;
-    .s#{$i} {
-        position: fixed;
-        top: calc(#{$percent} * 1%);
-        left: calc(#{$percent2} * 1%);
-        height: $stars_size;
-        width: $stars_size;
-        border-radius: $stars_size;
-        // box-shadow: 0 0 #{$shadow} #{$shadow} white;
-        background-color: white;
-        animation: 0.4s infinite alternate test1;
+    // $shadow: 3px;
+    // $stars_size: 3px;
+    @if ($stars_size==3) {
+        //On ne précise pas l'unité dans la condition
+        $stars_size: calc( #{$stars_size} * 1px); // On crée l'unité Pixel pour les propriétés qui ne l'utilise pas par défaut !
+        .s#{$i} {
+            position: fixed;
+            top: calc(#{$percent} * 1%);
+            left: calc(#{$percent2} * 1%);
+            height: $stars_size;
+            width: $stars_size;
+            border-radius: $stars_size;
+            // box-shadow: 0 0 #{$shadow} #{$shadow} white;
+            background-color: white;
+            animation: 0.4s infinite alternate test1;
+        }
+    }
+    @else {
+        $stars_size: calc( #{$stars_size} * 1px); // On crée l'unité Pixel pour les propriétés qui ne l'utilise pas par défaut !
+        .s#{$i} {
+            position: fixed;
+            top: calc(#{$percent} * 1%);
+            left: calc(#{$percent2} * 1%);
+            height: $stars_size;
+            width: $stars_size;
+            border-radius: $stars_size;
+            // box-shadow: 0 0 #{$shadow} #{$shadow} white;
+            background-color: white;
+            // animation: 0.4s infinite alternate test1;
+        }
     }
 }
 
@@ -156,7 +176,7 @@ html {
 
 @keyframes test1 {
     to {
-        transform: scale(0.70);
+        transform: scale(3);
     }
 }
 
