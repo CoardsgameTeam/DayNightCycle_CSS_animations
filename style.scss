@@ -57,6 +57,7 @@ html {
     animation: 4s forwards 1 slidein, 4s forwards 1 shadow;
     box-shadow: 0 0 1000px 350px lightyellow;
     transform: rotate(0turn) translate(0, -37000%) rotate(0turn);
+    z-index: 2;
 }
 
 #sun {
@@ -69,7 +70,7 @@ html {
     animation: 4s forwards 1 slidein, sun 4s forwards;
     box-shadow: 0 0 20px 50px yellow;
     transform: rotate(0turn) translate(0, -37000%) rotate(0turn);
-    z-index: 2;
+    z-index: 3;
 }
 
 #sunCenter {
@@ -83,7 +84,7 @@ html {
     box-shadow: 0 0 20px 10px rgb(255, 0, 0);
     background-color: #ff5f00;
     transform: rotate(0turn) translate(0, -37000%) rotate(0turn);
-    z-index: 3;
+    z-index: 4;
 }
 
 .pic {
@@ -98,12 +99,12 @@ html {
 }
 
 .change-pic {
-    visibility: hidden;
+    // visibility: hidden;
     animation: 3s 2s forwards 1 change-pic;
 }
 
 .change-mtn {
-    visibility: hidden;
+    // visibility: hidden;
     animation: 3s 2s forwards 1 change-mtn;
 }
 
@@ -127,7 +128,7 @@ html {
         position: fixed;
         // height: 2px;
         // width: 2px;
-        transform: rotate(-0.25turn) translate(0, -37000%) rotate(0.25turn);
+        transform: rotate(-0.5turn) translate(0, -37000%) rotate(0.5turn);
         //TO DO : SLIDE IN % Thanks to SASS
     }
 }
@@ -176,7 +177,7 @@ html {
 
 @keyframes test1 {
     to {
-        transform: scale(3);
+        transform: scale(0.7);
     }
 }
 
