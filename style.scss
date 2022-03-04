@@ -48,76 +48,75 @@ html {
   margin: 0;
 }
 
-div.clouds {
-  position: fixed;
-  text-align: center;
-  left: 10px;
-  top: 0px;
-  width: 150px;
-  height: 150px;
-  background: rgba(255, 255, 255, 0.9);
-  clip-path: circle(75px);
-}
+// div.clouds {
+//   position: fixed;
+//   left: 505px;
+//   top: 100px;
+//   width: 100px;
+//   height: 100px;
+//   background: rgba(166, 252, 255, 0.9);
+//   clip-path: ellipse(100px 100px at 5% 5%);
+// }
 
-div.clouds1 {
-  position: absolute;
-	left: 15px;
-  top: 75px;
-	width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.85);
-  clip-path: circle(40px);
-}
+// div.clouds1 {
+//   position: absolute;
+//   left: 15px;
+//   top: 75px;
+//   width: 80px;
+//   height: 80px;
+//   background: rgba(166, 252, 255, 0.9);
+//   clip-path: circle(40px);
+// }
 
-div.clouds2 {
-  position: absolute;
-	left: 40px;
-  top: 85px;
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.85);
-  clip-path: circle(40px);
-}
+// div.clouds2 {
+//   position: absolute;
+//   left: 40px;
+//   top: 85px;
+//   width: 80px;
+//   height: 80px;
+//   background: rgba(255, 255, 255, 0.85);
+//   clip-path: circle(40px);
+// }
 
-div.clouds3 {
-  position: absolute;
-	left: 70px;
-  top: 75px;
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.85);
-  clip-path: circle(40px);
-}
+// div.clouds3 {
+//   position: absolute;
+//   left: 70px;
+//   top: 75px;
+//   width: 80px;
+//   height: 80px;
+//   background: rgba(255, 255, 255, 0.85);
+//   clip-path: circle(40px);
+// }
 
-div.clouds4 {
-  position: absolute;
-	left: 90px;
-  top: 50px;
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.85);
-  clip-path: circle(40px);
-}
+// div.clouds4 {
+//   position: absolute;
+//   left: 90px;
+//   top: 50px;
+//   width: 80px;
+//   height: 80px;
+//   background: rgba(255, 255, 255, 0.85);
+//   clip-path: circle(40px);
+// }
 
-div.clouds5 {
-  position: absolute;
-	left: 70px;
-  top: 0px;
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.85);
-  clip-path: circle(40px);
-}
+// div.clouds5 {
+//   position: absolute;
+//   left: 70px;
+//   top: 0px;
+//   width: 80px;
+//   height: 80px;
+//   background: rgba(166, 252, 255, 0.9);
+//   clip-path: circle(40px);
+// }
 
-div.clouds6 {
-  position: absolute;
-	left: 20px;
-  top: 0px;
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.85);
-  clip-path: circle(40px);
-}
+// div.clouds6 {
+//   position: absolute;
+//   left: 20px;
+//   top: 0px;
+//   width: 80px;
+//   height: 80px;
+//   background: rgba(255, 255, 255, 0.85);
+//   clip-path: circle(40px);
+// }
 
 #sunShadow {
   position: fixed;
