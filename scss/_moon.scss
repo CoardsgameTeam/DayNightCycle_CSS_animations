@@ -1,0 +1,47 @@
+@import "variables";
+
+// Lune qui apparaît pendant la nuit
+#moon {
+  position: fixed;
+  top: 5%;
+  right: 15%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+  box-shadow: 0 0 20px rgba(240, 240, 240, 0.8),
+    inset -10px -10px 0 rgba(200, 200, 200, 0.541);
+  opacity: 0;
+  transition: all $transition-duration ease-in-out;
+  z-index: $z-moon;
+  cursor: pointer;
+  pointer-events: none;
+
+  // La lune apparaît quand l'animation commence (nuit)
+  .animation-started & {
+    opacity: 1;
+    transform: translateY(5vh);
+    pointer-events: visible;
+  }
+
+  // La lune disparaît quand on revient au jour
+  .animation-reverse & {
+    opacity: 0;
+    transform: translateY(-15vh);
+  }
+
+  // Créer des cratères sur la lune
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(180, 180, 180, 0.6);
+    box-shadow: 25px 10px 0 -2px rgba(180, 180, 180, 0.4),
+      15px 25px 0 -1px rgba(180, 180, 180, 0.5),
+      35px 30px 0 -3px rgba(180, 180, 180, 0.3);
+  }
+}

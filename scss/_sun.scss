@@ -1,0 +1,26 @@
+#sun {
+  position: fixed;
+  top: 10%;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 5px $primary-yellow, 0 0 200px 200px $primary-orange;
+  z-index: $z-sun;
+  opacity: 1;
+  transition: opacity $transition-duration ease-in-out;
+  background: radial-gradient(circle, $primary-red, $primary-yellow);
+  cursor: pointer;
+
+  // Animation only starts when body has animation-started class
+  .animation-started & {
+    animation: $animation-duration forwards sun-fall;
+    opacity: 1;
+  }
+
+  // Animation inverse quand on revient au jour
+  .animation-reverse & {
+    animation: $animation-duration forwards sun-up;
+    opacity: 1;
+  }
+}

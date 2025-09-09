@@ -1,0 +1,38 @@
+@import "variables";
+
+// Animations de mouvement du soleil
+@keyframes sun-fall {
+  from {
+    box-shadow: 0 0 50px 5px $primary-yellow, 0 0 200px 200px $primary-orange;
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+// Animation inverse pour le lever de soleil
+@keyframes sun-up {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+    box-shadow: 0 0 50px 5px $primary-yellow, 0 0 200px 200px $primary-orange;
+  }
+}
+
+@keyframes shadow-mountain {
+  to {
+    background-color: #35441d;
+  }
+}
+
+@keyframes shadow-sapling {
+  from {
+    background-color: darkolivegreen;
+  }
+  to {
+    background-color: #35441d;
+  }
+}
