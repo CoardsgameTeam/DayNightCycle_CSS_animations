@@ -35,7 +35,7 @@ $z-buttons: 1000;
 $animation-duration: 4s;
 $transition-duration: 2s;
 
-$stars-count: 100; // nombre d'étoiles
+$stars-count: 200; // nombre d'étoiles
 $max-x: 100; // max largeur en vw
 $max-y: 100; // max hauteur en vh
 $max-blur: 2; // flou max
@@ -48,3 +48,7 @@ $sun-yellow-2: #ffb500; // jaune plus chaud/orangé
 // Lune
 $moon-gray-1: #e0e0e0; // gris clair
 $moon-gray-2: #a0a0a0; // gris moyen
+
+$size: 250px; /* change la taille */
+$letter-color: #111;
+$bg: #f6f6f6;

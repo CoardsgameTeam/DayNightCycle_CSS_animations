@@ -1,8 +1,15 @@
 @import "variables";
 
+:root {
+  font-size: 10rem;
+  overflow: scroll;
+}
+
 // Styles de base
 html {
   height: 100%;
+  font-family: constellation, "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -10,15 +17,15 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  overflow: hidden;
+  // overflow: hidden;
   z-index: $z-background;
 
   background-image: linear-gradient(
     to bottom,
     $day-sky-blue 0%,
-    $sun-yellow-1 75%,
+    $sun-yellow-1 50%,
     $sun-yellow-2 85%,
-    #fff 95%
+    #fff 92%
   );
 
   &::before {

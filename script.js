@@ -4,15 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
    const sunButton = document.getElementById('sun');
    const moonButton = document.getElementById('moon');
 
-   // Generate stars dynamically
-   const starsContainer = document.querySelector('.stars');
-   const totalStars = 250; // nombre d'étoiles
-   for (let i = 0; i < totalStars; i++) {
-      const star = document.createElement('span');
-      star.classList.add('star');
-      starsContainer.appendChild(star);
-   }
-
    // Start animation
    sunButton.addEventListener('click', function () {
       document.body.classList.add('animation-started');
@@ -24,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
    // Reset animation
    moonButton.addEventListener('click', function () {
-      document.body.classList.add('animation-reverse');
       document.body.classList.remove('animation-started');
+      document.body.classList.add('animation-reverse');
 
       setTimeout(() => {
          document.body.classList.remove('animation-reverse');

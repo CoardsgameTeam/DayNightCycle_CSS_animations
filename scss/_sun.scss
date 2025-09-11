@@ -16,6 +16,7 @@
   .animation-started & {
     animation: $animation-duration forwards sun-fall;
     opacity: 1;
+    pointer-events: none;
   }
 
   // Animation inverse quand on revient au jour
