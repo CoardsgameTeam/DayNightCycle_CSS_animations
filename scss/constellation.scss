@@ -1,0 +1,17 @@
+.name {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 25vh;
+  box-sizing: content-box;
+  text-align: center;
+  flex-wrap: wrap;
+  color: aliceblue;
+
+  transition: opacity $animation-duration ease-in-out;
+  opacity: 0;
+}
+
+.animation-started .name {
+  opacity: 1;
+}
