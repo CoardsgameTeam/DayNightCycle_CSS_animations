@@ -3,6 +3,8 @@ $primary-orange: #ff9a3d;
 $primary-yellow: #ffd66b;
 $primary-red: rgb(255, 0, 0);
 $light-yellow: rgba(255, 255, 224, 0.498);
+$green: rgba(30, 144, 13, 0.925);
+$dark-green: rgb(12, 57, 5);
 
 // Couleurs de jour
 $day-sky-blue: #87ceeb;
@@ -25,10 +27,12 @@ $button-blue-2: #357abd;
 $z-background: -1;
 $z-stars: 1;
 $z-moon: 2;
-$z-sun-shadow: 2;
-$z-sun: 3;
-$z-sun-center: 4;
-$z-mountain: 100;
+$z-sun-shadow: 3;
+$z-sun: 4;
+$z-sun-center: 5;
+$z-mountain: 6;
+$z-trunk: 7;
+$z-sapling: 8;
 $z-buttons: 1000;
 
 // Animations
@@ -49,6 +53,8 @@ $sun-yellow-2: #ffb500; // jaune plus chaud/orangé
 $moon-gray-1: #e0e0e0; // gris clair
 $moon-gray-2: #a0a0a0; // gris moyen
 
-$size: 250px; /* change la taille */
+$sapling-size: 150px; /* change la taille */
+$sapling-margin: -$sapling-size / 3;
+$trunk-size: 120px;
 $letter-color: #111;
 $bg: #f6f6f6;

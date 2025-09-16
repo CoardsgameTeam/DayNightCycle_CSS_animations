@@ -17,11 +17,15 @@
     animation: $animation-duration forwards sun-fall;
     opacity: 1;
     pointer-events: none;
+    cursor: default;
   }
 
   // Animation inverse quand on revient au jour
   .animation-reverse & {
-    animation: $animation-duration forwards sun-up;
+    animation: sun-up $animation-duration forwards,
+      enablePointer 0s forwards $animation-duration;
     opacity: 1;
+    pointer-events: none;
+    cursor: default;
   }
 }

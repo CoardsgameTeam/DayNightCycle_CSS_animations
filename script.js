@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    // Start animation
    sunButton.addEventListener('click', function () {
+      document.body.classList.remove('animation-reverse');
       document.body.classList.add('animation-started');
 
       setTimeout(() => {
@@ -17,10 +18,5 @@ document.addEventListener('DOMContentLoaded', function () {
    moonButton.addEventListener('click', function () {
       document.body.classList.remove('animation-started');
       document.body.classList.add('animation-reverse');
-
-      setTimeout(() => {
-         document.body.classList.remove('animation-reverse');
-         console.log('Sunrise animation completed!');
-      }, 4000);
    });
 });

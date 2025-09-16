@@ -22,18 +22,10 @@
   }
 }
 
-@keyframes shadow-mountain {
+@keyframes enablePointer {
   to {
-    background-color: #35441d;
-  }
-}
-
-@keyframes shadow-sapling {
-  from {
-    background-color: darkolivegreen;
-  }
-  to {
-    background-color: #35441d;
+    pointer-events: auto;
+    cursor: pointer;
   }
 }
 

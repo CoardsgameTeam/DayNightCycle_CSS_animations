@@ -21,13 +21,18 @@
   .animation-started & {
     opacity: 1;
     transform: translateY(5vh);
-    pointer-events: visible;
+    pointer-events: none;
+    cursor: default;
+    animation: enablePointer 0s forwards $animation-duration;
   }
 
   // La lune disparaît quand on revient au jour
   .animation-reverse & {
     opacity: 0;
     transform: translateY(-15vh);
+    pointer-events: none;
+    cursor: default;
+    animation: enablePointer 0s forwards $animation-duration;
   }
 
   // Créer des cratères sur la lune
