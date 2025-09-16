@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
    // Get the buttons
    const sunButton = document.getElementById('sun');
    const moonButton = document.getElementById('moon');
+   const saplingButton = document.getElementsByClassName('sapling');
 
    // Start animation
-   sunButton.addEventListener('click', function () {
+   sunButton.addEventListener('click', () => {
       document.body.classList.remove('animation-reverse');
       document.body.classList.add('animation-started');
 
@@ -15,8 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 
    // Reset animation
-   moonButton.addEventListener('click', function () {
+   moonButton.addEventListener('click', () => {
       document.body.classList.remove('animation-started');
       document.body.classList.add('animation-reverse');
    });
+
+   saplingButton.addEventListener('click', () => {
+      saplingButton.classList.add('sidescroll-started');
+   })
 });
